@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding: 0;
+}
+#loader{
+    background-color: black;
+    width: 100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    align-content: center;
+    text-align: center;
+    background-image: url(assets/backgroundimage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#barContainer{
+    position:absolute;
+    height:50px;
+    width:700px;
+    bottom:10%;
+    /* left:50%; */
+    margin-left:200px;
+    font-size: 60px;
+    color:rgb(17, 53, 233);
+}
+#bar{
+    width:0;
+    height:10px;
+    background-color: rgb(26, 52, 223);
+}
