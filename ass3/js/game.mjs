@@ -1,4 +1,4 @@
-import { Sprite, Texture, Rectangle, Text,Container,PIXI_SOUND } from "https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.2/browser/pixi.mjs";
+import { Sprite, Texture, Rectangle, Text,Container } from "https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.2/browser/pixi.mjs";
 import { FRAMES, getCard, HEIGHT, shuffle, WIDTH } from "./card.mjs";
 import { getTextureById } from "./loader.mjs";
 // import * as PIXI from "../lib/pixi.js";
@@ -8,9 +8,9 @@ let firstChoice;
 let secondChoice;
 // let used=[];
 export function startgame(game){
-  // const{ stage1 }=game;
-  const sound1 = PIXI.sound.Sound.from('assets/sound.mp3');
-  sound1.play(); 
+  const{ stage }=game;
+  // const sound1 = PIXI.sound.Sound.from('assets/sound.mp3');
+  // sound1.play(); 
   const sprite1 = Sprite.from('assets/image.png');
   sprite1.width=innerWidth;
   sprite1.height=innerHeight; 
@@ -44,8 +44,8 @@ export function start(app) {
       console.log(cards.length)
       // console.log("secondChoice", secondChoice[0].id,secondChoice[1].id);
       // secondChoice;
-      secondChoice[0];
-      secondChoice[1];
+      secondChoice[0]=0;
+      secondChoice[1]=0;
     } else {
       stage.interactiveChildren = false;
       secondChoice = cards.filter((v) => v.isOpen());
